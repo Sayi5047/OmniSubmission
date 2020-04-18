@@ -28,6 +28,7 @@ class PlayerHolder(
     lateinit var mediaSource: MediaSource
 
     init {
+
         val audioManager = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
         val audioAttributes = AudioAttributesCompat.Builder()
             .setContentType(AudioAttributesCompat.CONTENT_TYPE_MUSIC)
