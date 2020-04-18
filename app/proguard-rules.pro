@@ -19,4 +19,4 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 -renamesourcefileattribute SourceFile
--keep class io.hustler.omnicurisassignment.data.model.pojol.** { *; }
+-keep class io.hustler.omnicurisassignment.data.model.** { *; }
