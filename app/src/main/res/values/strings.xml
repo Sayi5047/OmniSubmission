@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Omnicuris assignment</string>
+    <string name="add_next_video_to_playlist">Add Next Video to PlayList</string>
+    <string name="previous_video">Prev</string>
+    <string name="next_video">Next</string>
+    <string name="symmy_duration">duration: 2:30</string>
+    <string name="dummy_title">A Big Blue BunnY</string>
+    <string name="dummy_text">A bugs bunny</string>
+</resources>
