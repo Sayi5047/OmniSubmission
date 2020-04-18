@@ -3,6 +3,16 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        release {
+            def props = new Properties()
+            file("Cred.properties").withInputStream { props.load(it) }
+            keyAlias props.getProperty("keyAlias")
+            keyPassword props.getProperty("keyPassword")
+            storeFile file(props.getProperty("storeFile"))
+            storePassword props.getProperty("storePassword")
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
@@ -18,8 +28,11 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            shrinkResources true
+            debuggable false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 
